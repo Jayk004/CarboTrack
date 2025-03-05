@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>What is Your Carbon Footprint?</h1>
+    <h2>Calculate Here</h2>
+    <p class="quote">"The greatest threat to our planet is the belief that someone else will save it."</p>
+    
+    <div class="container">
+        <label>Transport (<span id="transport-unit">km per day</span>): 
+            <input type="number" id="transport">
+        </label>
+        <label>Electricity Usage (<span id="electricity-unit">kWh per month</span>): 
+            <input type="number" id="electricity">
+        </label>
+        <label>Meat Consumption (<span id="meat-unit">kg per week</span>): 
+            <input type="number" id="meat">
+        </label>
+        <label>Flights Taken Per Year: 
+            <input type="number" id="flights">
+        </label>
+        <label>Waste Produced (<span id="waste-unit">kg per week</span>): 
+            <input type="number" id="waste">
+        </label>
+        <label>Water Usage (<span id="water-unit">liters per day</span>): 
+            <input type="number" id="water">
+        </label>
+        <label>Shopping (<span id="shopping-unit">items per week</span>): 
+            <input type="number" id="shopping">
+        </label>
+        <label>Calculate For:
+            <select id="period" onchange="updateUnits()">
+                <option value="daily">Daily</option>
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+                <option value="yearly" selected>Yearly</option>
+            </select>
+        </label>
+        <button id="calculateBtn">Calculate</button>
+        <div id="result"></div>
+        <div id="tips"></div>
+        <canvas id="chart"></canvas>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
